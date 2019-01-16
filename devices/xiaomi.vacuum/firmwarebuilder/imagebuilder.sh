@@ -367,7 +367,7 @@ if [ $UNPROVISIONED -eq 1 ]; then
 
         mkdir $IMG_DIR/opt/unprovisioned
         cp $BASEDIR/unprovisioned/start_wifi.sh $IMG_DIR/opt/unprovisioned
-        chmod +x ./opt/unprovisioned/start_wifi.sh
+        chmod +x $IMG_DIR/opt/unprovisioned/start_wifi.sh
 
         sed -i 's/exit 0//' $IMG_DIR/etc/rc.local
         cat $BASEDIR/unprovisioned/rc.local >> $IMG_DIR/etc/rc.local
